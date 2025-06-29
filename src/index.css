@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500&family=Prata&display=swap");
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.custom-nav {
+  @screen 
+}
+
+.custom-cart-quantity {
+  @apply absolute bottom-[-5px] right-[-5px] bg-black text-white text-center text-xs w-4 h-4 rounded-full;
+}
+
+@media (min-width: 640px) {
+  a.active hr {
+    display: block;
+  }
+}
