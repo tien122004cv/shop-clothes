@@ -23,7 +23,9 @@ a.active hr {
   display: block;
 }
 
-a.active p {
-  background-color: black;
-  color: #fff;
+@media (max-width: 640px) {
+  a.active p {
+    background-color: black;
+    color: #fff;
+  }
 }
