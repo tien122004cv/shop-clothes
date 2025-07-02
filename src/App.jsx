@@ -7,6 +7,7 @@ import Navbar from "./Components/Navbar";
 import ProductDetail from "./Pages/ProductDetail";
 import Cart from "./Pages/Cart";
 import { ToastContainer } from "react-toastify";
+import User from "./Pages/User";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/:productId" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/user" element={<User />} />
       </Routes>
     </div>
   )

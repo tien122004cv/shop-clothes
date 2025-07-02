@@ -1,10 +1,10 @@
-import { LeftOutlined } from '@ant-design/icons'
 import { useState } from 'react'
 import { IoBagOutline, IoSearchOutline } from 'react-icons/io5'
 import { LuUserRound } from 'react-icons/lu'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import categoryIconMobile from '../assets/category-mobile_icon.png'
+import { IoIosArrowBack } from 'react-icons/io'
 
 const tabLinks = [
     { id: 1, name: 'Home', path: '/' },
@@ -23,7 +23,7 @@ export default function Navbar() {
                 <div className='flex items-center gap-2 py-2 pl-6 text-gray-400 bg-gray-100'
                     onClick={() => setShowSidebar(false)}
                 >
-                    <LeftOutlined />
+                    <IoIosArrowBack />
                     <p>Back</p>
                 </div>
                 {tabLinks.map(({ id, name, path }) => {
@@ -50,9 +50,9 @@ export default function Navbar() {
             </ul>
 
             <ul className='flex items-center gap-6'>
-                <Link><IoSearchOutline className='text-2xl' /></Link>
-                <Link><LuUserRound className='text-2xl' /></Link>
-                <Link className='relative'>
+                <Link to='/collection'><IoSearchOutline className='text-2xl' /></Link>
+                <Link to='/user'><LuUserRound className='text-2xl' /></Link>
+                <Link to='/cart' className='relative'>
                     <IoBagOutline className='text-2xl' />
                     <p className="custom-cart-quantity">0</p>
                 </Link>
