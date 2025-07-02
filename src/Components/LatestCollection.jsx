@@ -14,7 +14,7 @@ export default function LatestCollection() {
 
     return (
         <>
-            <div className='py-8'>
+            <div className='flex items-center justify-center py-8 text-3xl text-gray-500'>
                 <Title text1={"LATEST"} text2={"COLLECTIONS"} />
             </div>
             <ProductItem products={products.slice(0, 10)} />
